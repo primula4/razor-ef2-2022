@@ -2,7 +2,9 @@
 @model PrivacyModel
 @{
     ViewData["Title"] = "Privacy Policy";
+  
 }
 <h1>@ViewData["Title"]</h1>
+<h3>@Model.Message</h3>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>Use this page to detail your @Html.Raw(Model.Greeting) site's privacy policy.</p>

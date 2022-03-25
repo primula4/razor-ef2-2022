@@ -20,6 +20,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+/*app.MapGet("/test" , () => "Hello world");*/
+app.MapGet("/manual", (ctx) => {
+    return ctx.Response.WriteAsync ("Hello World");
+});
 app.MapRazorPages();
 
 app.Run();

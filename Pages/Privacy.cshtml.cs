@@ -5,6 +5,8 @@ namespace razor_ef2_2022.Pages;
 
 public class PrivacyModel : PageModel
 {
+    public string Message {get; private set;} = "Message!";
+      public string? Greeting {get; private set;}
     private readonly ILogger<PrivacyModel> _logger;
 
     public PrivacyModel(ILogger<PrivacyModel> logger)
@@ -14,6 +16,8 @@ public class PrivacyModel : PageModel
 
     public void OnGet()
     {
+        Message += $" the time is {DateTime.Now}";
+        Greeting = $"<a href=\"https://googl.com\">Google</a>";
     }
 }
 
